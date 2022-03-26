@@ -83,6 +83,6 @@ const server = http.createServer(function (request, response) {
   // response.end(); <--- Aquí no va por que el proceso es asíncrono.
 });
 
-server.listen(8080, function () {
-  console.log("Escuchando puerto 8080");
+server.listen(process.env.PORT || 8080, function () {
+  console.log("Escuchando peticiones");
 });
